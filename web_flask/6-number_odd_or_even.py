@@ -1,4 +1,6 @@
-tart Flask application
+#!/usr/bin/python3
+"""
+start Flask application
 """
 
 from flask import Flask, render_template
@@ -19,20 +21,20 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def cisfun(text):
-    """display “C ” followed by the value of the text variable"""
+    """display C"""
     return 'C ' + text.replace('_', ' ')
 
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pythoniscool(text='is cool'):
-    """display “Python ”, followed by the value of the text variable"""
+    """display Python"""
     return 'Python ' + text.replace('_', ' ')
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def imanumber(n):
-    """display “n is a number” only if n is an integer"""
+    """display n is a number only if n is an integer"""
     return "{:d} is a number".format(n)
 
 
